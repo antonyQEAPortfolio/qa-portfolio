@@ -23,7 +23,9 @@ describe('My First Test Suite', function()
         const textVeg=$el.find('h4.product-name').text()
         if(textVeg.includes('Cashews'))
         {
-            $el.find('button').click()
+             wrap($el).find('button').click()
+             // latest version click method is depricated with find
+            // We have to resolve the promise using wrap 
         }
     })
  
