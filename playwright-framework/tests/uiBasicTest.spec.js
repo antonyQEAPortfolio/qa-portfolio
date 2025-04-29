@@ -38,7 +38,7 @@ test("Page Context Playwright Test", async ({page}) =>
     console.log(await productList.nth(0).textContent());
 });
 
-test.only("Learning Page Playwright Test", async ({page}) =>     
+test.skip("Learning Page Playwright Test", async ({page}) =>     
     {
         const userName = page.locator('#userEmail');
         const passWord = page.locator("#userPassword");

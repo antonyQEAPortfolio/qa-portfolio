@@ -12,12 +12,16 @@ module.exports = defineConfig({
   expect: {
     timeout: 5000,
   },
-  reporter : 'html',
+  reporter : [ 
+    ['html'],
+    ['list'],
+    ['allure-playwright']
+  ],
   use: {
     browserName : 'chromium',
     headless : false,
     screenshot : 'off',
-    trace: 'off'
+    trace: 'off'  // To view the trace upload file in trace.playwright.dev
   },
 
 });
