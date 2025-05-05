@@ -9,7 +9,7 @@ I'm passionate about building robust automation frameworks, mentoring teams, and
 •  Postman, REST API Testing
 •  Azure DevOps, GitLab, JIRA, XRAY, Quality Center ALM
 **Programming Languages**: JavaScript and Python
-**SDLC & Methodologies**: Agile (Scrum, Kanban), Waterfal
+**SDLC & Methodologies**: Agile (Scrum, Kanban), Waterfall
 **Cloud & CI/CD**: Azure DevOps, GitLab CI/CD
 **Domains**:
 •  Property & Casualty Insurance (Claims)
