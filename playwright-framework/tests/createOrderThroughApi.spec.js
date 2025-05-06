@@ -1,6 +1,6 @@
 const {test, expect, request} = require('@playwright/test');
 const { ApiUtils } = require('../utils/ApiUtils.js');
-const loginPayLoad = {userEmail:"antony.sagayaraj7@gmail.com",userPassword:"India@1947."};
+const loginPayLoad = {userEmail: process.env.USER_EMAIL,userPassword: process.env.USER_PASSWORD};
 const orderPayLoad = {orders:[{country:"Cuba",productOrderedId:"67a8dde5c0d3e6622a297cc8"}]};
 
 let response;

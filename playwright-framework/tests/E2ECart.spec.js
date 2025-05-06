@@ -1,12 +1,14 @@
 const { test, expect } = require('@playwright/test'); 
+require('dotenv').config();
 test('@Web Client App login', async ({ page }) => {
    //js file- Login js, DashboardPage
-   const email = "antony.sagayaraj7@gmail.com";
+   const email = process.env.USER_EMAIL;
+   const password = process.env.USER_PASSWORD;
    const productName = 'ZARA COAT 3';
    const products = page.locator(".card-body");
    await page.goto("https://rahulshettyacademy.com/client");
    await page.locator("#userEmail").fill(email);
-   await page.locator("#userPassword").fill("India@1947.");
+   await page.locator("#userPassword").fill(password);
    await page.locator("[value='Login']").click();
    await page.waitForLoadState('networkidle');
    await page.locator(".card-body b").first().waitFor();
