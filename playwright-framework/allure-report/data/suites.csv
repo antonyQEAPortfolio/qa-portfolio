@@ -1,6 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","5372","Browser Context Playwright Test","","Tue May 06 16:57:29 EDT 2025","passed","Tue May 06 16:57:34 EDT 2025","","uiBasicTest.spec.js","",""
-"","8555","Page Context Playwright Test","","Tue May 06 16:57:35 EDT 2025","passed","Tue May 06 16:57:43 EDT 2025","","uiBasicTest.spec.js","",""
-"","13549","@Web Client App login","","Tue May 06 16:52:09 EDT 2025","passed","Tue May 06 16:52:23 EDT 2025","","E2ECart.spec.js","",""
-"","5276","@API Place the order","","Mon May 05 23:13:43 EDT 2025","passed","Mon May 05 23:13:48 EDT 2025","","createOrderThroughApi.spec.js","",""
-"","1","Learning Page Playwright Test","","Tue May 06 16:57:43 EDT 2025","skipped","Tue May 06 16:57:43 EDT 2025","","uiBasicTest.spec.js","",""
+"","5995","@API Place the order","","Tue May 06 17:55:57 EDT 2025","passed","Tue May 06 17:56:03 EDT 2025","","createOrderThroughApi.spec.js","",""
