@@ -1,5 +1,0 @@
-{
-  orders: [ '681a804dfd2af1c99e1286b9' ],
-  productOrderId: [ '67a8dde5c0d3e6622a297cc8' ],
-  message: 'Order Placed Successfully'
-}
