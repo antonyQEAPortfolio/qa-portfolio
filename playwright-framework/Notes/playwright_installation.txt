@@ -1,0 +1,39 @@
+Installation : npm init playwright@latest
+
+Run : npx playwright test 
+
+This will run all the spec file in the folder. 
+By default tests will be run on all 3 browsers, Chromium, Firefox and WebKit using 3 workers. This can be configured in the playwright.config file. Tests are run in headless mode meaning no browser will open up when running the tests. Results of the tests and test logs will be shown in the terminal.
+
+Updating Playwright :
+
+npm install -D @playwright/test@latest
+# Also download new browser binaries and their dependencies:
+npx playwright install --with-deps
+
+To check the version: npx playwright --version
+
+View HTML Report : npx playwright show-report
+
+This command will open the report in the localhost. It will list all the test case , we can go each step . To terminate the press ctrl + c
+
+To Run in UI mode : npx playwright test --ui
+Run your tests with UI Mode for a better developer experience with time travel debugging, watch mode and more.
+
+
+
+npx playwright test --headed // Run tests in headed mode
+npx playwright test --project webkit // Run tests on different browsers
+npx playwright test --project webkit --project firefox //Run tests on Multiple browsers
+npx playwright test landing-page.spec.ts // To run a single test file, pass in the name of the test file that you want to run.
+npx playwright test tests/todo-page/ tests/landing-page/ //To run a set of test files from different directories, pass in the names of the directories that you want to run the tests in.
+npx playwright test -g "add a todo item"  //To run a test with a specific title, use the -g flag followed by the title of the test.
+npx playwright test --last-failed // Run last failed tests
+
+Allure Report: npm install -D allure-playwright
+
+npx playwright test --grep @Web --reporter=line,allure-playwright  // this command will populate all the files as text in allure-results folder
+allure generate ./allure-results --clean // this command will convert the text into allure format and place it in allure folder
+allure open ./allure-report // this command will open the allure report
+
+
