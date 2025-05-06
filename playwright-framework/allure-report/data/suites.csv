@@ -1,2 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8661","Page Context Playwright Test","","Tue May 06 18:01:54 EDT 2025","passed","Tue May 06 18:02:03 EDT 2025","","uiBasicTest.spec.js","",""
+"","5131","Browser Context Playwright Test","","Tue May 06 18:01:49 EDT 2025","passed","Tue May 06 18:01:54 EDT 2025","","uiBasicTest.spec.js","",""
 "","5995","@API Place the order","","Tue May 06 17:55:57 EDT 2025","passed","Tue May 06 17:56:03 EDT 2025","","createOrderThroughApi.spec.js","",""
+"","4","Learning Page Playwright Test","","Tue May 06 18:02:03 EDT 2025","skipped","Tue May 06 18:02:03 EDT 2025","","uiBasicTest.spec.js","",""
