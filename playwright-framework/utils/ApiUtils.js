@@ -1,3 +1,4 @@
+require('dotenv').config();
 class ApiUtils {
     constructor(apiContext, loginPayLoad) {
         this.apiContext = apiContext;
