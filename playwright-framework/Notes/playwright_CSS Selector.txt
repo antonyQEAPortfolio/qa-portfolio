@@ -1,0 +1,23 @@
+// CSS Selector
+
+If Id is present
+css -> tagname#id or #id
+
+If Class attribute is present
+css -> tagname.class or .class
+
+Write Css based on any attribute
+css -> [attribute = 'value']
+
+Write Css with travesing from parent to child
+css -> parenttagname >> chhildtagname
+
+If needs to write the locator based on text
+text = ''
+
+ await page.getByLabel("Gender").selectOption("Female");
+ await page.getByPlaceholder("Password").fill("abc123");
+ await page.getByRole("button", {name: 'Submit'}).click();
+ await page.getByText("Success! The Form has been submitted successfully!.").isVisible();
+ await page.getByRole("link",{name : "Shop"}).click();
+ await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();

@@ -1,4 +1,5 @@
 const {test , expect} = require('@playwright/test');
+require('dotenv').config();
 // async and await is combination (as javascript is asynchronous - if we dont use await keyword
 //  it will execte randomly) . Only await will come into picture if we use async before function
 // instead of function() , we can write () => ( anonmyous function - do not have any name)
@@ -25,28 +26,32 @@ test("Page Context Playwright Test", async ({page}) =>
     const siginButton = page.locator('#signInBtn');
     const loginErrorMessage = page.locator("[style*='block']");
     const productList = page.locator("h4[class='card-title']");
+    const userLogin = process.env.Login_email;
+    const userPassword = process.env.Login_password;
     await page.goto("https://rahulshettyacademy.com/loginpagePractise");
     await userName.fill('antony'); //rahulshettyacademy
-    await passWord.fill('learning');
+    await passWord.fill(userPassword);
     await siginButton.click();
     console.log(await loginErrorMessage.textContent());
     //await expect(page.locator("[style*='block']")).toHaveText('Incorrect username/password.');
     await expect(loginErrorMessage).toContainText('Incorrect');
     await userName.fill("");
-    await userName.fill("rahulshettyacademy");
+    await userName.fill(userLogin);
     await siginButton.click();
     console.log(await productList.nth(0).textContent());
 });
 
-test.skip("Learning Page Playwright Test", async ({page}) =>     
+test("Learning Page Playwright Test", async ({page}) =>     
     {
         const userName = page.locator('#userEmail');
         const passWord = page.locator("#userPassword");
         const siginButton = page.locator('#login');
         const productList = page.locator(".card-body b");
+        const email = process.env.USER_EMAIL;
+        const password = process.env.USER_PASSWORD;
         await page.goto("https://rahulshettyacademy.com/client");
-        await userName.fill('antony.sagayaraj7@gmail.com'); //rahulshettyacademy
-        await passWord.fill('India@1947.');
+        await userName.fill(email); //rahulshettyacademy
+        await passWord.fill(password);
         await siginButton.click();
         await page.waitForLoadState('networkidle');
         console.log(await productList.allTextContents());
