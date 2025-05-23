@@ -1,0 +1,1 @@
+zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5
