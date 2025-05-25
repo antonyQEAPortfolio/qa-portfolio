@@ -8,6 +8,8 @@ const { on } = require('events');
  */
 module.exports = defineConfig({
   testDir: './tests',
+  retries: 1,
+  workers: 1, // by defalut playwirght will execute in 5 workers if its not defined
   timeout: 40 *1000,
   expect: {
     timeout: 5000,
@@ -17,12 +19,36 @@ module.exports = defineConfig({
     ['list'],
     ['allure-playwright']
   ],
+  // Default settings for all projects
   use: {
-    browserName : 'chromium',
-    headless : false,
-    screenshot : 'off',
-    trace: 'off'  // To view the trace upload file in trace.playwright.dev
+    trace: 'off',
+    screenshot: 'off',
+    headless: false
   },
 
+  // Define individual projects here
+  projects: [
+    {
+      name: 'Chromium',
+      use: {
+        browserName: 'chromium'
+      }
+    },
+    {
+      name: 'WebKit',
+      use: {
+        browserName: 'webkit'
+      }
+    },
+    {
+      name: 'iPhone 15 Pro',
+      use: {
+        ...devices['iPhone 15 Pro'],
+        headless: false,
+        screenshot: 'off',
+        trace: 'off'
+      }
+    }
+  ]
 });
 

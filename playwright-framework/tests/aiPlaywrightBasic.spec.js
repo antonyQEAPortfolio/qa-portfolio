@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 import {ai} from "@zerostep/playwright"
 require('dotenv').config();
 
-test('Login Using AI', async ({ page }) => {
+test('@Hybrid Login Using AI', async ({ page }) => {
   const userLogin = process.env.Login_email;
   const userPassword = process.env.Login_password;
   const aiArgs = { page, test }

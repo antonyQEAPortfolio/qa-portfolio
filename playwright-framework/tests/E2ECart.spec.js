@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test'); 
 require('dotenv').config();
-test('@Web Client App login', async ({ page }) => {
    //js file- Login js, DashboardPage
+   test('@Functional Client App login', async ({ page }) => {
    const email = process.env.USER_EMAIL;
    const password = process.env.USER_PASSWORD;
    const productName = 'ZARA COAT 3';

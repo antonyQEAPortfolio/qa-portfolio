@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 import {ai} from "@zerostep/playwright"
 
-test('AI Test capability', async ({ page }) => {
+test('@Hybrid AI Test capability', async ({ page }) => {
   const aiArgs = {page,test}
   await page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers');
   //Blinking Text Validation

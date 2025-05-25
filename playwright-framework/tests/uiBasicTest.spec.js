@@ -5,7 +5,7 @@ require('dotenv').config();
 // instead of function() , we can write () => ( anonmyous function - do not have any name)
 // {browser} - its a default fixture ( global variable) from playwirght ; We have to use {}
 
-test("Browser Context Playwright Test", async ({browser}) => 
+test("@Functional Browser Context Playwright Test", async ({browser}) => 
 {
     
     const context = await browser.newContext();
@@ -19,7 +19,7 @@ test("Browser Context Playwright Test", async ({browser}) =>
     console.log('Page Title is', pageTitle);
 });
 
-test("Page Context Playwright Test", async ({page}) =>     
+test("@Functional Page Context Playwright Test", async ({page}) =>     
 {
     const userName = page.locator('#username');
     const passWord = page.locator("[type='password']");
@@ -41,7 +41,7 @@ test("Page Context Playwright Test", async ({page}) =>
     console.log(await productList.nth(0).textContent());
 });
 
-test("Learning Page Playwright Test", async ({page}) =>     
+test("@Functional Learning Page Playwright Test", async ({page}) =>     
     {
         const userName = page.locator('#userEmail');
         const passWord = page.locator("#userPassword");

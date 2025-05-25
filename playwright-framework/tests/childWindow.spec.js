@@ -1,6 +1,6 @@
 const {test , expect} = require('@playwright/test');
 
-test("Locator Checkbox and dropdown Playwright Test", async ({browser}) =>     
+test("@Functional Locator Checkbox and dropdown Playwright Test", async ({browser}) =>     
     {
         
         const context = await browser.newContext();

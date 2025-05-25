@@ -8,4 +8,4 @@ node_modules/
 /allure-results/
 .env
 zerostep.config.json
-placeOrderTestData.json
+ClientAppPOTestData.json
