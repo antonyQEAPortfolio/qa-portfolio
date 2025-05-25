@@ -4,9 +4,9 @@
  //Json --> String --> js object
  // stringify will allow to convert the json file into string , parse method will covert to object
  // this will help to avoid conversion issue and use the test data effiectively
- const dataSet = JSON.parse(JSON.stringify(require("../utils/placeOrderTestData.json")));
-
- test('Client App login', async ({page})=>
+ const dataSet = JSON.parse(JSON.stringify(require("../utils/ClientAppPOTestData.json")));
+for (const data of dataSet){
+ test(`@PageObject To Verify user able to login and add the ${data.productName} product sucessfully`, async ({page})=>
  {
    const poManager = new POManager(page);
     //js file- Login js, DashboardPage
@@ -14,13 +14,13 @@
     //  const password = process.env.USER_PASSWORD;
      const loginPage = poManager.getLoginPage();
      await loginPage.goTo();
-     await loginPage.validLogin(dataSet.username,dataSet.password);
+     await loginPage.validLogin(data.username,data.password);
      const dashboardPage = poManager.getDashboardPage();
-     await dashboardPage.searchProductAddCart(dataSet.productName);
+     await dashboardPage.searchProductAddCart(data.productName);
      await dashboardPage.navigateToCart();
 
      const cartPage = poManager.getCartPage();
-     await cartPage.VerifyProductIsDisplayed(dataSet.productName);
+     await cartPage.VerifyProductIsDisplayed(data.productName);
      await cartPage.Checkout();
  
      const ordersReviewPage = poManager.getOrdersReviewPage();
@@ -33,7 +33,7 @@
      expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();    
 
  });
- 
+ }
 
  
 
