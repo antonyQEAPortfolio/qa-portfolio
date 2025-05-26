@@ -5,7 +5,8 @@
  // stringify will allow to convert the json file into string , parse method will covert to object
  // this will help to avoid conversion issue and use the test data effiectively
  const dataSet = JSON.parse(JSON.stringify(require("../utils/ClientAppPOTestData.json")));
-for (const data of dataSet){
+for (const data of dataSet)
+{
  test(`@PageObject To Verify user able to login and add the ${data.productName} product sucessfully`, async ({page})=>
  {
    const poManager = new POManager(page);
