@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {    
     "regression" : "npx playwright test",
-    "hybridTest" : "npx playwright test --grep=\"@Hybrid\" --project=\"iPhone 15 Pro\"",
+    "hybridTest" : "npx playwright test --grep=\"@Hybrid\" --project=\"Chromium\"",
     "Functional" : "npx playwright test --grep=\"@Functional\" --project=\"WebKit\"",
-    "PageObject" : "npx playwright test --grep=\"@PageObject\" --project=\"Chromium\" ",
+    "PageObject" : "npx playwright test --grep=\"@PageObject\" --project=\"Chromium\"",
+    "test:iphone": "npx playwright test --grep=\"@Mobile\" --project=\"iPhone 15 Pro\"",
     "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
     "allure:open": "allure open ./allure-report"
   },
