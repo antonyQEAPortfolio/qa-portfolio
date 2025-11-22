@@ -1,6 +1,6 @@
 const {test , expect} = require('@playwright/test');
 
-test("@Functional Locator Checkbox and dropdown Playwright Test", async ({page}) =>     
+test("@Functional @Mobile Locator Checkbox and dropdown Playwright Test", async ({page}) =>     
     {
         
         const workTypeDropdown = page.locator("select.form-control");
