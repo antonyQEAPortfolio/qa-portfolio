@@ -1,5 +1,5 @@
 // Launch google URL and list all the hyperlink
-
+import 'cypress-mochawesome-reporter/register';
 describe("Launch the url" , ()=>{
 
   it("Launch sucessful" , ()=>{
