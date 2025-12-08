@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-
+import 'cypress-mochawesome-reporter/register';
 describe('My First Test Suite', function() 
 { 
     it('My FirstTest case',function() 
